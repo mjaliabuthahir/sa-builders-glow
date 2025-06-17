@@ -1,13 +1,13 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-gray-900 to-blue-900 text-white py-16">
+    <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-lg">SA</span>
               </div>
               <div>
@@ -24,10 +24,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2 text-gray-300">
-              <li className="hover:text-orange-400 transition-colors cursor-pointer">Residential Construction</li>
-              <li className="hover:text-orange-400 transition-colors cursor-pointer">Commercial Building</li>
-              <li className="hover:text-orange-400 transition-colors cursor-pointer">Renovation & Remodeling</li>
-              <li className="hover:text-orange-400 transition-colors cursor-pointer">Project Management</li>
+              <li className="hover:text-pink-400 transition-colors cursor-pointer">Residential Construction</li>
+              <li className="hover:text-pink-400 transition-colors cursor-pointer">Commercial Building</li>
+              <li className="hover:text-pink-400 transition-colors cursor-pointer">Renovation & Remodeling</li>
+              <li className="hover:text-pink-400 transition-colors cursor-pointer">Project Management</li>
             </ul>
           </div>
 

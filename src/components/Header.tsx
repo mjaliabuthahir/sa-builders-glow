@@ -2,11 +2,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-interface HeaderProps {
-  onAdminClick: () => void;
-}
-
-const Header = ({ onAdminClick }: HeaderProps) => {
+const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
@@ -16,17 +12,17 @@ const Header = ({ onAdminClick }: HeaderProps) => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-white/20 shadow-lg shadow-purple-100/20">
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-gradient-to-br from-pink-400 via-purple-500 to-indigo-600 rounded-xl flex items-center justify-center shadow-lg">
             <span className="text-white font-bold text-lg">SA</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold bg-gradient-to-r from-orange-600 to-blue-600 bg-clip-text text-transparent">
+            <h1 className="text-xl font-bold bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
               SA Builders
             </h1>
-            <p className="text-xs text-gray-600">Since 2017</p>
+            <p className="text-xs text-gray-500">Since 2017</p>
           </div>
         </div>
 
@@ -34,42 +30,34 @@ const Header = ({ onAdminClick }: HeaderProps) => {
         <nav className="hidden md:flex items-center space-x-8">
           <button 
             onClick={() => scrollToSection('home')}
-            className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium hover:scale-105"
           >
             Home
           </button>
           <button 
             onClick={() => scrollToSection('services')}
-            className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium hover:scale-105"
           >
             Services
           </button>
           <button 
             onClick={() => scrollToSection('portfolio')}
-            className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium hover:scale-105"
           >
             Portfolio
           </button>
-          <button 
+          <Button 
             onClick={() => scrollToSection('quote')}
-            className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            className="bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 hover:from-pink-600 hover:via-purple-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
           >
             Get Quote
-          </button>
+          </Button>
           <button 
             onClick={() => scrollToSection('about')}
-            className="text-gray-700 hover:text-orange-600 transition-colors font-medium"
+            className="text-gray-700 hover:text-purple-600 transition-all duration-300 font-medium hover:scale-105"
           >
             About
           </button>
-          <Button 
-            onClick={onAdminClick}
-            variant="outline" 
-            size="sm"
-            className="border-orange-200 text-orange-600 hover:bg-orange-50"
-          >
-            Admin
-          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -86,14 +74,18 @@ const Header = ({ onAdminClick }: HeaderProps) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="absolute top-full left-0 right-0 bg-white/95 backdrop-blur-md border-b border-gray-200 md:hidden">
+          <div className="absolute top-full left-0 right-0 bg-white/90 backdrop-blur-xl border-b border-white/20 md:hidden shadow-lg">
             <nav className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-              <button onClick={() => scrollToSection('home')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Home</button>
-              <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Services</button>
-              <button onClick={() => scrollToSection('portfolio')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Portfolio</button>
-              <button onClick={() => scrollToSection('quote')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">Get Quote</button>
-              <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-orange-600 transition-colors font-medium">About</button>
-              <Button onClick={onAdminClick} variant="outline" size="sm" className="w-fit border-orange-200 text-orange-600 hover:bg-orange-50">Admin</Button>
+              <button onClick={() => scrollToSection('home')} className="text-left text-gray-700 hover:text-purple-600 transition-colors font-medium">Home</button>
+              <button onClick={() => scrollToSection('services')} className="text-left text-gray-700 hover:text-purple-600 transition-colors font-medium">Services</button>
+              <button onClick={() => scrollToSection('portfolio')} className="text-left text-gray-700 hover:text-purple-600 transition-colors font-medium">Portfolio</button>
+              <Button 
+                onClick={() => scrollToSection('quote')} 
+                className="w-fit bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 text-white shadow-lg"
+              >
+                Get Quote
+              </Button>
+              <button onClick={() => scrollToSection('about')} className="text-left text-gray-700 hover:text-purple-600 transition-colors font-medium">About</button>
             </nav>
           </div>
         )}
