@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-purple-900 to-indigo-900 text-white py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 animate-slide-in-right">
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -52,7 +52,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center animate-slide-in-right delay-300">
           <p className="text-gray-400">
             © 2024 SA Builders. All rights reserved. | Licensed & Insured
           </p>

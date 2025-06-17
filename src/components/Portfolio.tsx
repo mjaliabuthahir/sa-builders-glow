@@ -26,7 +26,7 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-gradient-to-b from-white via-purple-50/30 to-pink-50/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-in-right">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-pink-500 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
             Our Portfolio
           </h2>
@@ -35,7 +35,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 animate-slide-in-right delay-300">
           {projects.map((project, index) => (
             <Card 
               key={index} 

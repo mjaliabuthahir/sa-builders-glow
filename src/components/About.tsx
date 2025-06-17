@@ -5,7 +5,7 @@ const About = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+            <div className="space-y-8 animate-slide-in-right">
               <div>
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
                   About SA Builders
@@ -55,7 +55,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative animate-slide-in-right delay-300">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-orange-400/20 rounded-3xl transform rotate-6"></div>
               <img 
                 src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=800&q=80"

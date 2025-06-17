@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -55,7 +54,7 @@ const Quote = () => {
   return (
     <section id="quote" className="py-20 bg-gradient-to-br from-blue-50 to-orange-50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-slide-in-right">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
             Get Your Free Quote
           </h2>
@@ -64,7 +63,7 @@ const Quote = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-slide-in-right delay-300">
           <Card className="bg-white/80 backdrop-blur-sm border-0 shadow-2xl">
             <CardHeader className="text-center pb-8">
               <CardTitle className="text-2xl text-gray-800">Project Details</CardTitle>

@@ -18,7 +18,7 @@ const Hero = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center py-20">
-          <div className="animate-fade-in">
+          <div className="animate-slide-in-right">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
               Building Your
               <span className="block bg-gradient-to-r from-orange-300 to-yellow-300 bg-clip-text text-transparent">
@@ -51,7 +51,7 @@ const Hero = () => {
           </div>
           
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-fade-in delay-500">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16 animate-slide-in-right delay-300">
             <div className="text-center">
               <div className="text-4xl md:text-5xl font-bold text-white mb-2">200+</div>
               <div className="text-blue-200">Projects Completed</div>
